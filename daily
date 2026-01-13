@@ -1,0 +1,4 @@
+{{$count := toInt (dbGet 0 "msgs_counter").Value}}
+{{$randomID := randInt 1 $count}}
+{{$randomMsg := dbGet 0 (print "msgs:" $randomID)}}
+Daily: {{$randomMsg.Value}}
