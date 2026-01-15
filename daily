@@ -2,3 +2,5 @@
 {{$randomID := randInt 1 $count}}
 {{$randomMsg := dbGet 0 (print "msgs:" $randomID)}}
 Daily: {{$randomMsg.Value}}
+
+//interval 24h
