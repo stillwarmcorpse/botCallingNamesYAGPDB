@@ -2,3 +2,5 @@
 {{$randomID := randInt 1 $count}}
 {{$randomMsg := dbGet 0 (print "msgs:" $randomID)}}
 {{$randomMsg.Value}}
+
+//!kapi
