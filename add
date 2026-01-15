@@ -1,0 +1,7 @@
+{{$count := toInt (or (dbGet 0 "msgs_counter").Value 0)}}
+{{$newID := add $count 1}}
+{{dbSet 0 "msgs_counter" $newID}}
+{{$message := slice .Message.Content 5}}
+{{dbSet 0 (print "msgs:" $newID) (trimSpace $message)}}
+
+/!add <message>
